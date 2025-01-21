@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   
     // Extraire la première et la dernière date (si les données sont ordonnées)
     const startDate = bikesData.length > 0
-      ? new Date(bikesData[0].year, bikesData[0].month - 1, bikesData[0].day)
+      ? new Date(2021, 11, 1,23,59,59,999)
       : null;
     const endDate = bikesData.length > 0
       ? new Date(bikesData[bikesData.length - 1].year, bikesData[bikesData.length - 1].month - 1, bikesData[bikesData.length - 1].day)
@@ -258,7 +258,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     const endHourStr = document.getElementById('end-hour').value;
 
     let startDate=null, endDate=null;
-    if(startDateStr) startDate = new Date(startDateStr);
+    if(startDateStr) {
+      startDate = new Date(startDateStr);
+      startDate.setHours(0,0,0,0);
+    }
     if(endDateStr) {
       endDate = new Date(endDateStr);
       endDate.setHours(23,59,59,999);
