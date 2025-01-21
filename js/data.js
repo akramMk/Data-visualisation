@@ -28,7 +28,7 @@ export async function loadStationsData() {
 
 export async function loadBikesData() {
   try {
-    const data = await d3.csv('data/data-bikes.csv');
+    const data = await d3.csv('data/december-data.csv');
     // On garde uniquement le mois 12 (décembre)
     return data
       .map(d => ({
