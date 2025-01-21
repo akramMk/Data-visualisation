@@ -586,7 +586,7 @@ function displayScatterPlot(data, container) {
     .attr('y', -5)
     .attr('text-anchor', 'middle')
     .style('font-size', '12px')
-    .text('Nuage de points (Heure vs Vélos)');
+    .text("Variation du nombre de vélos en fonction de l'heure");
     
     // Label de l'axe X
   svg.append('text')
